@@ -7,6 +7,9 @@ output: html_document
 
 An introduction of the problem domain and a description of the variable(s) you are choosing to analyze (and why!)
 
+The problem domain of this dataset that I chose to study and analyze is the disproportionate makeup of prisons in the United States regarding the population and ratio of Black inmates to White inmates. I want to analyze the variations in ratios of Black to White inmates across prisons specifically, since this assignment is related to incarceration, so I'm only using the CSV file related to prison population per county/state. My variables of interest in this data set are year, state, total_prison_pop, black_prison_pop, and white_prison_pop. I specifically chose to only analyze the Black and White populations because Black people make up a disproportional amount in U.S prisons compared to White people, so observing how those ratios vary across states would help corroborate the findings showcased in the documentary 13th, while heavily focused on this unbalanced population ratio. 
+
+
 ### Summary Information
 
 Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
@@ -18,6 +21,12 @@ These will likely be calculated using your DPLYR skills, answering questions suc
 - How much has my variable change over the last N years?
 
 Feel free to calculate and report values that you find relevant. Again, remember that the purpose is to think about how these measure of incarceration vary by race.
+
+
+``````{r, echo = FALSE, code = readLines("summary.R")}
+```
+
+
 
 ### The Dataset
 
