@@ -14,8 +14,8 @@ I want to analyze the variations in ratios of Black to White inmates
 across prisons specifically, since this assignment is related to
 incarceration, so I'm only using the CSV file related to prison
 population per county/state. My variables of interest in this data set
-are year, state, total_prison_pop, black_prison_pop, and
-white_prison_pop. I specifically chose to only analyze the Black and
+are `year`, `state`, `total_prison_pop`, `black_prison_pop`, and
+`white_prison_pop`. I specifically chose to only analyze the Black and
 White populations because Black people make up a disproportional amount
 in U.S prisons compared to White people, so observing how those ratios
 vary across states would help corroborate the findings showcased in the documentary 13th, while heavily focused on this unbalanced population
@@ -29,19 +29,15 @@ Write a summary paragraph of findings that includes the 5 values calculated from
 
 My two main variables of interest are Black to White prison population
 ratios and total average population counts. To further explore these
-variables and get myself familiar with them, I first calculated the total_average_black_population and total_average_white_population,
+variables and get myself familiar with them, I first calculated the `total_average_black_population` and `total_average_white_population`,
 which was about 247 for White and 162 for Black. These values are not
 a good picture of the real proportions as this data spans across almost
 50 years worth of data, most of which are NA or extremely low numbers.
-Then I calculated the average black_to_white_ratio, grouped by state to
+Then I calculated the average `black_to_white_ratio`, grouped by state to
 create a data frame of only the states and their respective
-black_to_white_ratio. From this data frame, called average_prison_ratios,
-I arranged it in descending order from greatest ratio to lowest ratio
-and filtered out the top 10 states into a variable called
-sorted_ratio_states. The highest black_to_white_ratio among these states
-was "LA" or Louisiana, stored in the variable highest_state. The black_to_white_ratio for LA was around 3.165, meaning there were 
+`black_to_white_ratio`. From this data frame, called `average_prison_ratios`, I arranged it in descending order from greatest ratio to lowest ratio and filtered out the top 10 states into a variable called `sorted_ratio_states`. The highest `black_to_white_ratio` among these states was "LA" or Louisiana, stored in the variable `highest_state`. The `black_to_white_ratio` for LA was around 3.165, meaning there were 
 on average over 3 times as many Black inmates than White inmates in
-Louisiana prisons, stored in the variable highest_ratio. This is a
+Louisiana prisons, stored in the variable `highest_ratio`. This is a
 significant number which will be studied further on, along with the other states, later on in this analysis. 
 
 ### The Dataset
@@ -112,13 +108,13 @@ truth about our prison system; as most of the issues stay hidden and are systemi
 
 ### Trends Over Time Chart
 
-``````{r, echo = FALSE, code = readLines("chart1_example.R")}
+```{r echo = FALSE, code = readLines("chart1_example.R") }
 ```
 
 
-The first chart that I made was a line graph displaying the trend of black_to_white_ratio for the top 10 states in the U.S overtime. It ranges
+The first chart that I made was a line graph displaying the trend of `black_to_white_ratio` for the top 10 states in the U.S overtime. It ranges
 from 1970 to 2018. As we can see from the graph, there is a clear upwards
-trend in the black_to_white_ratio for all 10 states, meaning that the disproportionate makeup of Black inmates in their prisons was rapidly increasing, some jumping from 1 to 4 times as many Black inmates than
+trend in the `black_to_white_ratio` for all 10 states, meaning that the disproportionate makeup of Black inmates in their prisons was rapidly increasing, some jumping from 1 to 4 times as many Black inmates than
 White, most noticeably for NJ. We can also see where important political
 events and laws were passed in regards to incarceration, the most apparent
 one being the massive spike in the mid to late 90's, when President Clinton created the infamous crime bill and ultimately doubled the amount of Black inmates in prisons across the U.S. There has been a gradual decrease since
@@ -128,7 +124,7 @@ high to be ignored.
 
 ### Variable Comparison Chart
 
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+```{r echo = FALSE, code = readLines("chart2_example.R") }
 ```
 
 This chart compares the correlation between average prison population and average Black to White prison population ratios for all states in this
@@ -140,10 +136,10 @@ values from states who reported zero information on their populations.
 
 ### Map
 
-``````{r, echo = FALSE, code = readLines("map_example.R")}
+```{r, echo = FALSE, code = readLines("map_example.R")}
 ```
 
-This is a map showcasing the geographical distribution of the variation in black_to_white_ratios across the United States. The legend on the side represents the color shading that corresponds to the rounded ratios
+This is a map showcasing the geographical distribution of the variation in `black_to_white_ratio` across the United States. The legend on the side represents the color shading that corresponds to the rounded ratios
 (1, 2, and 3 meaning that the Black inmate population is x times as large
 as the White inmate population). There is more red shading in the
 Southern and East Coast states, states where there are larger populations
